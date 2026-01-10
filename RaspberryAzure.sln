@@ -1,0 +1,54 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.0.0
+MinimumVisualStudioVersion = 17.8.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaspberryAzure.AppHost", "RaspberryAzure.AppHost\RaspberryAzure.AppHost.csproj", "{9B068635-3EB6-439A-A9C9-04D6FFB84F56}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaspberryAzure.ServiceDefaults", "RaspberryAzure.ServiceDefaults\RaspberryAzure.ServiceDefaults.csproj", "{4151BC8D-6F3C-45C3-9837-1BF99C223AE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspberryAzure.PersistanceWorker", "RaspberryAzure.PersistanceWorker\RaspberryAzure.PersistanceWorker.csproj", "{DB0551AC-4F4E-4840-82FF-BC909B927D70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspberryAzure.AggregatorService", "RaspberryAzure.AggregatorService\RaspberryAzure.AggregatorService.csproj", "{0ACC1D72-D20F-4109-94F5-76EF5FD00FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspberryAzure.AgentAnalyzer", "RaspberryAzure.AgentAnalyzer\RaspberryAzure.AgentAnalyzer.csproj", "{8597832B-5553-4B5E-9FBA-ACD9AA43A956}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RaspberryAzure.AnomalyDetector", "RaspberryAzure.AnomalyDetector\RaspberryAzure.AnomalyDetector.fsproj", "{04FF971D-6987-4F63-845B-83BCCAA1D971}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B068635-3EB6-439A-A9C9-04D6FFB84F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B068635-3EB6-439A-A9C9-04D6FFB84F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B068635-3EB6-439A-A9C9-04D6FFB84F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B068635-3EB6-439A-A9C9-04D6FFB84F56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4151BC8D-6F3C-45C3-9837-1BF99C223AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4151BC8D-6F3C-45C3-9837-1BF99C223AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4151BC8D-6F3C-45C3-9837-1BF99C223AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4151BC8D-6F3C-45C3-9837-1BF99C223AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB0551AC-4F4E-4840-82FF-BC909B927D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0551AC-4F4E-4840-82FF-BC909B927D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0551AC-4F4E-4840-82FF-BC909B927D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0551AC-4F4E-4840-82FF-BC909B927D70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ACC1D72-D20F-4109-94F5-76EF5FD00FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ACC1D72-D20F-4109-94F5-76EF5FD00FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ACC1D72-D20F-4109-94F5-76EF5FD00FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ACC1D72-D20F-4109-94F5-76EF5FD00FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8597832B-5553-4B5E-9FBA-ACD9AA43A956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8597832B-5553-4B5E-9FBA-ACD9AA43A956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8597832B-5553-4B5E-9FBA-ACD9AA43A956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8597832B-5553-4B5E-9FBA-ACD9AA43A956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FF971D-6987-4F63-845B-83BCCAA1D971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FF971D-6987-4F63-845B-83BCCAA1D971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FF971D-6987-4F63-845B-83BCCAA1D971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FF971D-6987-4F63-845B-83BCCAA1D971}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {613AEEC8-6588-46A5-A612-9267B3B80BF0}
+	EndGlobalSection
+EndGlobal

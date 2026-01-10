@@ -1,0 +1,52 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: 200px;
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
+
+#logo {
+    fill: wheat;
+    stroke: gold;
+    stroke-width: 3;
+    animation: logo-spin infinite 20s linear;
+    transform-origin: center;
+}
+
+#logo:hover {
+    filter: drop-shadow(0 0 2em goldenrod);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+label {
+    display: block;
+}
+
+textarea {
+    height: 100%;
+}
+button {
+    margin: 2em;
+}

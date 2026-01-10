@@ -1,0 +1,10 @@
+@HostAddress = http://localhost:5029
+
+POST {{HostAddress}}/addData/
+Accept: application/json
+
+###
+
+GET {{HostAddress}}/askAi?input={{InputPrompt}}}
+Accept: application/json
+

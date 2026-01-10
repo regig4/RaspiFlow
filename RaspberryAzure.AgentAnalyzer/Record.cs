@@ -1,0 +1,1 @@
+public record Record(double Data, long Timestamp);

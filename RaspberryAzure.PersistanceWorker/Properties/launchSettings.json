@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "RaspberryAzure_PersistanceWorker": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7127",
+      "launchBrowser": false
+    }
+  }
+}
