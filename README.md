@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ## What the Project Does
-RaspberryAzure is a project designed to seamlessly integrate Raspberry Pi devices with Microsoft Azure services. It provides tools and scripts to enable IoT solutions, data collection, and cloud-based analytics using Azure's robust ecosystem.
+RaspiFlow is a project designed to seamlessly integrate Raspberry Pi devices with Microsoft Azure services. It provides tools and scripts to enable IoT solutions, data collection, and cloud-based analytics using Azure's robust ecosystem.
 
 ## Why the Project is Useful
 - **IoT Integration**: Simplifies connecting Raspberry Pi devices to Azure IoT Hub.
