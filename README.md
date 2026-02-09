@@ -13,6 +13,18 @@ RaspberryAzure is a project designed to seamlessly integrate Raspberry Pi device
 - **Scalability**: Leverages Azure's scalable infrastructure for large-scale IoT deployments.
 - **Ease of Use**: Provides pre-configured scripts and examples to get started quickly.
 
+## Diagrams
+
+```mermaid
+graph LR;
+  PythonScript-->ServiceBus;
+  PythonScript-->EventHub;
+  ServiceBus-->BackgroundWorkerAggregatorService;
+  ReactClient-->AgenticAIService;
+  BackgroundWorkerAggregatorService-->AgenticAIService;
+  AgenticAIService-->FSharpScript;
+```
+
 ## How Users Can Get Started
 
 ### Prerequisites
@@ -23,7 +35,7 @@ RaspberryAzure is a project designed to seamlessly integrate Raspberry Pi device
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/RaspberryAzure.git
+   git clone https://github.com/regig4/RaspiFlow.git
    cd RaspberryAzure
    ```
 2. Install dependencies:
@@ -35,21 +47,15 @@ RaspberryAzure is a project designed to seamlessly integrate Raspberry Pi device
    - Update the `config.json` file with your Azure credentials.
 
 ### Usage
-Run the main script to start sending data to Azure:
-```bash
-python main.py
-```
-
-For detailed examples, refer to the `examples/` directory.
+Run the AppHost project which spins up local environment
 
 ## Where Users Can Get Help
-- Documentation: [docs/](docs/)
-- Issues: [GitHub Issues](https://github.com/yourusername/RaspberryAzure/issues)
-- Community: Join the discussion on [GitHub Discussions](https://github.com/yourusername/RaspberryAzure/discussions)
+- Issues: [GitHub Issues](https://github.com/regig4/RaspiFlow/issues)
+- Community: Join the discussion on [GitHub Discussions](https://github.com/regig4/RaspiFlow/discussions)
 
 ## Who Maintains and Contributes
-- **Maintainer**: Bartek (bartek@example.com)
-- **Contributors**: See the list of [contributors](https://github.com/yourusername/RaspberryAzure/graphs/contributors) who participated in this project.
+- **Maintainer**: regig4
+- **Contributors**: See the list of [contributors](https://github.com/regig4/RaspiFlow/graphs/contributors) who participated in this project.
 
 ### Contribution Guidelines
 We welcome contributions! Please see `docs/CONTRIBUTING.md` for details on how to get involved.
