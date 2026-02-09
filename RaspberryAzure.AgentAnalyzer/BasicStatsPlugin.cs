@@ -40,13 +40,6 @@ public class BasicStatsPlugin
     [Description("Returns the anomalies of latest records/measurements.")]
     public List<double> GetAnomalies()
     {
-        // old solution using json serialization
-        // string data = JsonSerializer.Serialize(Storage.GetLatestRecord(), new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
-        //
-        // if (data is null or "null")
-        //     return [];
-        
-        
         var data = ListModule.OfSeq(Storage.GetLatestRecord().Select(r => r.Data));
         FSharpList<double> output = AnomalyDetector.Program.getAnomalies(data);
         return output.ToList();
