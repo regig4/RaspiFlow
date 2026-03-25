@@ -8,7 +8,7 @@ builder.AddAzureEventHubConsumerClient("event-hubs");
 #if !SKIP_UNSTABLE_EMULATORS
 builder.AddAzureServiceBusClient("messaging");
 #endif
-
+builder.AddAzureBlobClient("blobs");
 builder.ConfigureFunctionsWebApplication();
 
 // builder.AddAzureEventHubConsumerClient("event-hubs");

@@ -72,5 +72,13 @@ var reactApp = builder.AddNpmApp("reactvite", "../RaspberryAzure.ReactClient")
     .WithExternalHttpEndpoints()
     .PublishAsDockerFile();
 
+var storage = builder.AddAzureStorage("storage")
+    .RunAsEmulator();
+
+var blobs = storage.AddBlobs("blobs");
+
+functions
+    .WithReference(blobs)
+    .WaitFor(blobs);
 
 builder.Build().Run();

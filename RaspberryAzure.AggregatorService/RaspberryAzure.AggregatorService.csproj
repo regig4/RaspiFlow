@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-RaspberryAzure.AggregatorService-81301e13-c197-4b63-a23e-17817b8d515a</UserSecretsId>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
