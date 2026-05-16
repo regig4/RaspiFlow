@@ -23,6 +23,7 @@ graph LR;
   ReactClient-->AgenticAIService;
   BackgroundWorkerAggregatorService-->AgenticAIService;
   AgenticAIService-->FSharpScript;
+  EventHub--->BlobStorage
 ```
 
 ## How Users Can Get Started
