@@ -1,0 +1,43 @@
+@baseUrl = http://localhost:5226
+
+### Label an image from a local file
+POST {{baseUrl}}/label-image
+Content-Type: multipart/form-data; boundary=----Boundary
+
+------Boundary
+Content-Disposition: form-data; name="image"; filename="photo.jpg"
+Content-Type: image/jpeg
+
+< ./photo.jpg
+
+------Boundary--
+
+###
+
+### Label a PNG image
+POST {{baseUrl}}/label-image
+Content-Type: multipart/form-data; boundary=----Boundary
+
+------Boundary
+Content-Disposition: form-data; name="image"; filename="photo.png"
+Content-Type: image/png
+
+< ./photo.png
+
+------Boundary--
+
+###
+
+### Label a WebP image
+POST {{baseUrl}}/label-image
+Content-Type: multipart/form-data; boundary=----Boundary
+
+------Boundary
+Content-Disposition: form-data; name="image"; filename="photo.webp"
+Content-Type: image/webp
+
+< ./photo.webp
+
+------Boundary--
+
+###

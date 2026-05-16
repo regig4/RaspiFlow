@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspberryAzure.AgentAnalyze
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RaspberryAzure.AnomalyDetector", "RaspberryAzure.AnomalyDetector\RaspberryAzure.AnomalyDetector.fsproj", "{04FF971D-6987-4F63-845B-83BCCAA1D971}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspberryAzure.ImageRecognition", "RaspberryAzure.ImageRecognition\RaspberryAzure.ImageRecognition.csproj", "{BAF0B5F1-766C-4B5B-9723-4734C13CDAC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{04FF971D-6987-4F63-845B-83BCCAA1D971}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04FF971D-6987-4F63-845B-83BCCAA1D971}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04FF971D-6987-4F63-845B-83BCCAA1D971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF0B5F1-766C-4B5B-9723-4734C13CDAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF0B5F1-766C-4B5B-9723-4734C13CDAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF0B5F1-766C-4B5B-9723-4734C13CDAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF0B5F1-766C-4B5B-9723-4734C13CDAC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

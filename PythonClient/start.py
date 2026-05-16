@@ -5,15 +5,20 @@ import json
 #import serial
 from azure.eventhub import EventHubProducerClient, EventData
 from azure.servicebus import ServiceBusClient, ServiceBusMessage
-from random import randrange 
+from random import randrange
+
+event_hub_conn_str = os.environ.get("ConnectionStrings__event-hubs")
+event_hub_conn_str.replace("localhost", "192.168.1.111")
 
 producer = EventHubProducerClient.from_connection_string(
-    conn_str=os.environ.get("ConnectionStrings__event-hubs"),
+    conn_str=event_hub_conn_str,
     consumer_group="$Default",
     eventhub_name="eh1")
 
+service_bus_conn_str = os.environ.get("ConnectionStrings__myservicebus")
+
 servicebus_client = ServiceBusClient.from_connection_string(
-    conn_str=os.environ.get("ConnectionStrings__myservicebus"),
+    conn_str=service_bus_conn_str,
     logging_enable=True
 )
 
@@ -21,6 +26,7 @@ prev_simulated_sensor_read = 20
 
 simulated_reads = True
 
+# for temp and humidity sensors 
 device0 = "/sys/bus/iio/devices/iio:device0"
 
 def read_simulation(reader, sender, prev_simulated_sensor_read):

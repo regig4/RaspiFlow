@@ -81,4 +81,15 @@ functions
     .WithReference(blobs)
     .WaitFor(blobs);
 
+// Emulator not working on MacOS
+// var cosmos = builder.AddAzureCosmosDB("cosmos")
+//     .RunAsEmulator(); 
+//
+// var db = cosmos.AddDatabase("mydb");
+//
+// functions
+//     .WithReference(db);
+
+builder.AddProject<RaspberryAzure_ImageRecognition>("imageRecognitionAgent");
+
 builder.Build().Run();

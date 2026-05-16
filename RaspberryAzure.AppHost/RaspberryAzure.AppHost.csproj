@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" Version="13.2.0" />
+    <PackageReference Include="Aspire.Hosting.Azure.CosmosDB" Version="13.2.2" />
     <PackageReference Include="Aspire.Hosting.Azure.EventHubs" Version="13.1.2" />
     <PackageReference Include="Aspire.Hosting.Azure.ServiceBus" Version="13.1.2" />
     <PackageReference Include="Aspire.Hosting.Azure.Storage" Version="13.2.0" />
@@ -27,6 +28,7 @@
     <ProjectReference Include="..\RaspberryAzure.AnomalyDetector\RaspberryAzure.AnomalyDetector.fsproj" />
     <ProjectReference Include="..\RaspberryAzure.PersistanceWorker\RaspberryAzure.PersistanceWorker.csproj" />
     <ProjectReference Include="..\RaspberryAzure.AggregatorService\RaspberryAzure.AggregatorService.csproj" />
+    <ProjectReference Include="..\RaspberryAzure.ImageRecognition\RaspberryAzure.ImageRecognition.csproj" />
   </ItemGroup>  
 
 </Project>

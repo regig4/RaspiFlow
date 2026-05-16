@@ -103,13 +103,11 @@ namespace RaspberryAzure
 
             
             // Adds the string "DOWNLOADED" before the .txt extension so it doesn't 
-// overwrite the original file
-
+            // overwrite the original file
             string downloadFilePath = localFilePath.Replace(".txt", "DOWNLOADED.txt");
-
             _logger.LogInformation("Downloading blob to: {0}", downloadFilePath);
 
-// Download the blob's contents and save it to a file
+            // Download the blob's contents and save it to a file
             BlobDownloadInfo download = await blobClient.DownloadAsync();
 
             using (FileStream downloadFileStream = File.OpenWrite(downloadFilePath))
