@@ -65,7 +65,7 @@ aggregator.WithReference(agent);
 var anomalyDetector =
     builder.AddProject<RaspberryAzure_AnomalyDetector>("anomalyDetector");
 
-var reactApp = builder.AddNpmApp("reactvite", "../RaspberryAzure.ReactClient")
+var reactApp = builder.AddJavaScriptApp("frontend", "../RaspberryAzure.ReactClient")
     .WithReference(agent)
     .WithEnvironment("BROWSER", "none")
     .WithHttpEndpoint(env: "VITE_PORT")
@@ -90,6 +90,12 @@ functions
 // functions
 //     .WithReference(db);
 
-builder.AddProject<RaspberryAzure_ImageRecognition>("imageRecognitionAgent");
+var sql = builder.AddSqlServer("sql")
+    .WithImageTag("2025-latest")
+    .AddDatabase("SceneDb");
+
+builder.AddProject<RaspberryAzure_ImageRecognition>("imageRecognitionAgent")
+    .WithReference(sql)
+    .WaitFor(sql);
 
 builder.Build().Run();

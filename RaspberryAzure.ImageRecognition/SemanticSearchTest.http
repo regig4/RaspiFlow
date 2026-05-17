@@ -1,0 +1,23 @@
+### Query camera recordings
+POST http://localhost:5226/query
+Content-Type: application/json
+
+{
+  "question": "Was there any movement detected recently?"
+}
+
+### Query about specific objects
+POST http://localhost:5226/query
+Content-Type: application/json
+
+{
+  "question": "Were there any animals in the camera recordings?"
+}
+
+### Query about specific time
+POST http://localhost:5226/query
+Content-Type: application/json
+
+{
+  "question": "What happened in the last hour?"
+}
