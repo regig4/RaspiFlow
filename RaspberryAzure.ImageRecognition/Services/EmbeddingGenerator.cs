@@ -2,11 +2,11 @@ using Microsoft.Data.SqlTypes;
 using OllamaSharp;
 using OllamaSharp.Models;
 
-public class EmbeddingService
+public class EmbeddingGenerator
 {
     private readonly OllamaApiClient _ollama;
 
-    public EmbeddingService()
+    public EmbeddingGenerator()
     {
         _ollama = new OllamaApiClient(new Uri("http://localhost:11434"));
         _ollama.SelectedModel = "nomic-embed-text";
