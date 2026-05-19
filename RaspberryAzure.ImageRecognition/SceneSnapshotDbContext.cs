@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
+namespace RaspberryAzure.ImageRecognition;
+
 public class SceneSnapshotDbContext : DbContext
 {
     public SceneSnapshotDbContext(DbContextOptions<SceneSnapshotDbContext> options) : base(options) { }

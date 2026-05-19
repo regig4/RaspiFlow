@@ -1,5 +1,7 @@
 using Microsoft.Data.SqlTypes;
 
+namespace RaspberryAzure.ImageRecognition;
+
 public class SceneSnapshot
 {
     public Guid Id { get; set; } = Guid.NewGuid();

@@ -2,21 +2,25 @@ using Microsoft.Data.SqlTypes;
 using OllamaSharp;
 using OllamaSharp.Models;
 
+namespace RaspberryAzure.ImageRecognition.Services;
+
 public class EmbeddingGenerator
 {
     private readonly OllamaApiClient _ollama;
+    private readonly string _model;
 
-    public EmbeddingGenerator()
+    public EmbeddingGenerator(IConfiguration configuration)
     {
-        _ollama = new OllamaApiClient(new Uri("http://localhost:11434"));
-        _ollama.SelectedModel = "nomic-embed-text";
+        var baseUrl = configuration["Ollama:BaseUrl"] ?? "http://localhost:11434";
+        _model = configuration["Ollama:EmbeddingModel"] ?? "nomic-embed-text";
+        _ollama = new OllamaApiClient(new Uri(baseUrl));
     }
 
     public async Task<SqlVector<float>> GetEmbeddingAsync(string text)
     {
         var response = await _ollama.EmbedAsync(new EmbedRequest
         {
-            Model = "nomic-embed-text",
+            Model = _model,
             Input = [text]
         });
 

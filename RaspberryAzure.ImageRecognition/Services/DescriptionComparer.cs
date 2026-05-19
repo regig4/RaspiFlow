@@ -2,7 +2,7 @@ namespace RaspberryAzure.ImageRecognition;
 
 public class DescriptionComparer
 {
-    public float CosineSimilarity(ReadOnlySpan<float> a, ReadOnlySpan<float> b)
+    public static float CosineSimilarity(ReadOnlySpan<float> a, ReadOnlySpan<float> b)
     {
         float dot = 0, magA = 0, magB = 0;
         for (int i = 0; i < a.Length; i++)

@@ -1,6 +1,6 @@
 using SkiaSharp;
 
-namespace RaspberryAzure.ImageRecognition;
+namespace RaspberryAzure.ImageRecognition.Services;
 
 public class ImageComparer
 {
@@ -9,24 +9,21 @@ public class ImageComparer
         using var lastBitmap     = SKBitmap.Decode(lastBytes);
         using var incomingBitmap = SKBitmap.Decode(incomingBytes);
 
-        // Resize to 64x64
         var info = new SKImageInfo(64, 64, SKColorType.Gray8);
-        using var lastResized     = lastBitmap.Resize(info, SKFilterQuality.Low);
-        using var incomingResized = incomingBitmap.Resize(info, SKFilterQuality.Low);
-
-        int totalPixels  = 64 * 64;
-        int changedPixels = 0;
+        var sampling = new SKSamplingOptions(SKFilterMode.Linear);
+        using var lastResized     = lastBitmap.Resize(info, sampling);
+        using var incomingResized = incomingBitmap.Resize(info, sampling);
 
         var lastSpan     = lastResized.GetPixelSpan();
         var incomingSpan = incomingResized.GetPixelSpan();
 
+        int changedPixels = 0;
         for (int i = 0; i < lastSpan.Length; i++)
         {
-            var diff = Math.Abs(lastSpan[i] - incomingSpan[i]);
-            if (diff > 30)
+            if (Math.Abs(lastSpan[i] - incomingSpan[i]) > 30)
                 changedPixels++;
         }
 
-        return (float)changedPixels / totalPixels;
+        return (float)changedPixels / (64 * 64);
     }
 }
